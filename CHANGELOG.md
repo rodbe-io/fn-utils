@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/rodbe-io/fn-utils/compare/v1.0.0...v1.1.0) (2025-01-07)
+
+
+### Features
+
+* add array utility ([225a857](https://github.com/rodbe-io/fn-utils/commit/225a857b244e235d5d357819cc7bc214aa9786e4))
+
 ## 1.0.0 (2025-01-07)
 
 
