@@ -1,3 +1,1 @@
-export const init = () => {
-  console.log('init');
-};
+export * from './utils';
