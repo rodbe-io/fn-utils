@@ -40,7 +40,12 @@
     "pnpm": ">= 9.15.2"
   },
   "enginesStrict": true,
-  "exports": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -50,7 +55,6 @@
     "front-end"
   ],
   "license": "MIT",
-  "main": "./dist/index.js",
   "name": "@rodbe/fn-utils",
   "packageManager": "pnpm@9.15.2",
   "publishConfig": {
@@ -70,7 +74,6 @@
     "type-check": "tsc --noEmit"
   },
   "type": "module",
-  "types": "./dist/index.d.ts",
   "version": "1.1.0",
   "volta": {
     "node": "18.18.2"
