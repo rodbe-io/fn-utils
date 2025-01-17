@@ -67,6 +67,7 @@
   "scripts": {
     "build": "pkgroll",
     "commitlint": "commitlint --edit",
+    "prebuild": "pnpm run type-check",
     "prepare": "husky || true",
     "release": "semantic-release",
     "start": "pkgroll --watch",
