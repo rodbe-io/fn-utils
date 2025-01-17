@@ -1,6 +1,6 @@
 import { isObject } from './predicates';
 
-export const to = async <Response, E = unknown>(
+export const to = async <Response, E extends Record<string, unknown> = Record<string, unknown>>(
   promise: Promise<Response>,
   errInfo?: E
 ): Promise<[null, Response] | [Error & E, null]> => {
