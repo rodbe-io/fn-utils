@@ -1,3 +1,11 @@
+## [1.3.0](https://github.com/rodbe-io/fn-utils/compare/v1.2.0...v1.3.0) (2025-01-17)
+
+
+### Features
+
+* **adapters:** add webstorage ([ed13e79](https://github.com/rodbe-io/fn-utils/commit/ed13e792b8649b987c429c3c10fb832d6db235c1))
+* **async:** default Error type ([df40243](https://github.com/rodbe-io/fn-utils/commit/df40243586596075e7cf13cd53df931619e6f5f8))
+
 ## [1.2.0](https://github.com/rodbe-io/fn-utils/compare/v1.1.0...v1.2.0) (2025-01-12)
 
 
