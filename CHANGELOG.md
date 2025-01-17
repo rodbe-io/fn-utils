@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/rodbe-io/fn-utils/compare/v1.3.0...v1.3.1) (2025-01-17)
+
+
+### Bug Fixes
+
+* **utils:** type async util ([197dc94](https://github.com/rodbe-io/fn-utils/commit/197dc94438cfdf4f347c98f3dac13724340225a9))
+
 ## [1.3.0](https://github.com/rodbe-io/fn-utils/compare/v1.2.0...v1.3.0) (2025-01-17)
 
 
