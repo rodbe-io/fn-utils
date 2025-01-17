@@ -29,7 +29,6 @@
     "pkgroll": "^2.4.1",
     "prettier": "^3.3.3",
     "semantic-release": "20.1.0",
-    "simple-git-hooks": "^2.11.1",
     "typescript": "^5.2.2",
     "typescript-eslint": "^8.19.0",
     "vitest": "^2.0.5"
