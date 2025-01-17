@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/rodbe-io/fn-utils/compare/v1.3.1...v1.3.2) (2025-01-17)
+
+
+### Bug Fixes
+
+* compiler type ([8ef1bb9](https://github.com/rodbe-io/fn-utils/commit/8ef1bb9a1de15549edcdcbe1b037e0c263cdfdba))
+
 ## [1.3.1](https://github.com/rodbe-io/fn-utils/compare/v1.3.0...v1.3.1) (2025-01-17)
 
 
