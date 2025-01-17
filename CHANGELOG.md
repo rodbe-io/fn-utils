@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/rodbe-io/fn-utils/compare/v1.3.2...v1.4.0) (2025-01-17)
+
+
+### Features
+
+* remove adapter to its own package ([6f76eb1](https://github.com/rodbe-io/fn-utils/commit/6f76eb15e1b09325458abb35c714c213b00c55ab))
+
 ## [1.3.2](https://github.com/rodbe-io/fn-utils/compare/v1.3.1...v1.3.2) (2025-01-17)
 
 
