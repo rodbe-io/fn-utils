@@ -80,9 +80,6 @@ importers:
       semantic-release:
         specifier: 20.1.0
         version: 20.1.0(typescript@5.7.2)
-      simple-git-hooks:
-        specifier: ^2.11.1
-        version: 2.11.1
       typescript:
         specifier: ^5.2.2
         version: 5.7.2
@@ -2830,10 +2827,6 @@ packages:
   signale@1.4.0:
     resolution: {integrity: sha512-iuh+gPf28RkltuJC7W5MRi6XAjTDCAPC/prJUpQoG4vIP3MJZ+GTydVnodXA7pwvTKb2cA0m9OFZW/cdWy/I/w==}
     engines: {node: '>=6'}
-
-  simple-git-hooks@2.11.1:
-    resolution: {integrity: sha512-tgqwPUMDcNDhuf1Xf6KTUsyeqGdgKMhzaH4PAZZuzguOgTl5uuyeYe/8mWgAr6IBxB5V06uqEf6Dy37gIWDtDg==}
-    hasBin: true
 
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -5896,8 +5889,6 @@ snapshots:
       chalk: 2.4.2
       figures: 2.0.0
       pkg-conf: 2.1.0
-
-  simple-git-hooks@2.11.1: {}
 
   slash@3.0.0: {}
 

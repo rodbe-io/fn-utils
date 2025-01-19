@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-explicit-any
-type Func = (...args: any) => any;
+import type { Func } from '@/types';
 
 export const pipe = <FirstFunc extends Func, RestFunc extends Array<Func>, LastFunc extends Func>(
   ...fns: [FirstFunc, ...RestFunc, LastFunc]
