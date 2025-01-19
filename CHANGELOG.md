@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/rodbe-io/fn-utils/compare/v1.4.0...v1.5.0) (2025-01-19)
+
+
+### Features
+
+* add try-catch ([5ac6e2f](https://github.com/rodbe-io/fn-utils/commit/5ac6e2f7ba902adda2da1eba0966a78fbd18bba7))
+
 ## [1.4.0](https://github.com/rodbe-io/fn-utils/compare/v1.3.2...v1.4.0) (2025-01-17)
 
 
