@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/rodbe-io/fn-utils/compare/v1.5.0...v1.6.0) (2025-05-01)
+
+
+### Features
+
+* export type ToAwaited for to-func ([1a1308a](https://github.com/rodbe-io/fn-utils/commit/1a1308afd9d8dac1530076b91a0e471f98a3828e))
+
 ## [1.5.0](https://github.com/rodbe-io/fn-utils/compare/v1.4.0...v1.5.0) (2025-01-19)
 
 
