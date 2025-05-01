@@ -1,9 +1,11 @@
 import { isObject } from './predicates';
 
-export const to = async <Response, E extends Record<string, unknown> = Record<string, unknown>>(
+export type ToAwaited<Res, Err = Error> = [(Err & Error) | null, Res | null];
+
+export const to = async <Response, Err extends Record<string, unknown> = Record<string, unknown>>(
   promise: Promise<Response>,
-  errInfo?: E
-): Promise<[null, Response] | [Error & E, null]> => {
+  errInfo?: Err
+): Promise<ToAwaited<Response, Err>> => {
   try {
     const res = await promise;
 
@@ -13,6 +15,6 @@ export const to = async <Response, E extends Record<string, unknown> = Record<st
       Object.assign(err, errInfo);
     }
 
-    return [err as Error & E, null];
+    return [err as Error & Err, null];
   }
 };
