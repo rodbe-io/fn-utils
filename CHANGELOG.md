@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/rodbe-io/fn-utils/compare/v1.6.0...v1.6.1) (2025-05-02)
+
+
+### Bug Fixes
+
+* **async:** type ([33f5e6c](https://github.com/rodbe-io/fn-utils/commit/33f5e6c82bf20b3856c31bef9417bc18a90192e7))
+
 ## [1.6.0](https://github.com/rodbe-io/fn-utils/compare/v1.5.0...v1.6.0) (2025-05-01)
 
 
