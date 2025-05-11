@@ -2,19 +2,19 @@ import { isObject } from './predicates';
 
 export type ToAwaited<Res, Err = Error> = [Err | null, Res | null];
 
-export const to = async <Response, Err extends Record<string, unknown> = Error & Record<string, unknown>>(
+export const to = async <Response, CustomErrorObj = Record<string, unknown>>(
   promise: Promise<Response>,
-  errInfo?: Err
-): Promise<ToAwaited<Response, Err>> => {
+  customErrorObj?: CustomErrorObj
+): Promise<ToAwaited<Response, CustomErrorObj & Error>> => {
   try {
     const res = await promise;
 
     return [null, res];
   } catch (err) {
-    if (isObject(errInfo) && err instanceof Error) {
-      Object.assign(err, errInfo);
+    if (isObject(customErrorObj) && err instanceof Error) {
+      Object.assign(err, customErrorObj);
     }
 
-    return [err as Err, null];
+    return [err as CustomErrorObj & Error, null];
   }
 };
