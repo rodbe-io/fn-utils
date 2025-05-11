@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/rodbe-io/fn-utils/compare/v1.6.1...v1.6.2) (2025-05-11)
+
+
+### Bug Fixes
+
+* **to:** default type for error ([b390870](https://github.com/rodbe-io/fn-utils/commit/b390870dc33a0e8e60e3de750fa24b87511400f2))
+
 ## [1.6.1](https://github.com/rodbe-io/fn-utils/compare/v1.6.0...v1.6.1) (2025-05-02)
 
 
