@@ -47,7 +47,7 @@ const defaultRetry = {
   statusToRetry: [429, 503, 504],
 };
 
-export const retryFetch =
+export const retryFetchBuilder =
   (config: FetcherConfig = defaultRetry) =>
   async <Res>(url: string, options: RequestInit) => {
     const { retries, retryDelay, statusToRetry } = config;
