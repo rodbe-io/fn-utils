@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/rodbe-io/fn-utils/compare/v1.6.3...v1.7.0) (2025-05-12)
+
+
+### Features
+
+* **fetcher:** safe fetch with retry ([20f016e](https://github.com/rodbe-io/fn-utils/commit/20f016e43f5564e724728405f6e5f1c7e311a629))
+
 ## [1.6.3](https://github.com/rodbe-io/fn-utils/compare/v1.6.2...v1.6.3) (2025-05-12)
 
 
