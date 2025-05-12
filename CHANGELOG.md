@@ -1,3 +1,10 @@
+## [1.8.0](https://github.com/rodbe-io/fn-utils/compare/v1.7.0...v1.8.0) (2025-05-12)
+
+
+### Features
+
+* **retryFetch:** rename to retryFetchBuilder ([75ec115](https://github.com/rodbe-io/fn-utils/commit/75ec11506bbc7d8a9c1e33f6371796faaa28bc26))
+
 ## [1.7.0](https://github.com/rodbe-io/fn-utils/compare/v1.6.3...v1.7.0) (2025-05-12)
 
 
