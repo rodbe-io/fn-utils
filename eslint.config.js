@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import js from '@eslint/js';
 import tsEslint from 'typescript-eslint';
 import prettier from 'eslint-plugin-prettier/recommended';
-import packageJson from 'eslint-plugin-package-json/configs/recommended';
+import packageJson from 'eslint-plugin-package-json';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -14,7 +14,7 @@ const eslintConfig = tsEslint.config(
   js.configs.recommended,
   tsEslint.configs.strictTypeChecked,
   tsEslint.configs.stylisticTypeChecked,
-  packageJson,
+  packageJson.configs.recommended,
   {
     languageOptions: {
       parserOptions: {
