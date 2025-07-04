@@ -1,3 +1,9 @@
+## [1.9.0](https://github.com/rodbe-io/fn-utils/compare/v1.8.0...v1.9.0) (2025-07-04)
+
+### Features
+
+* add readme + trigger pipeline ([ae8e92e](https://github.com/rodbe-io/fn-utils/commit/ae8e92e2ca72d4e6046003e04457826a36efae8a))
+
 ## [1.8.0](https://github.com/rodbe-io/fn-utils/compare/v1.7.0...v1.8.0) (2025-05-12)
 
 
