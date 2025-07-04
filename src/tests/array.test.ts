@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { purge } from './array';
+import { purge } from '../utils/array';
 
 describe('purge', () => {
   it('should purge array', () => {

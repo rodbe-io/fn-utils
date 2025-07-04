@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { compose, pipe } from './fp';
+import { compose, pipe } from '../utils/fp';
 
 const add2 = (a: number): number => a + 2;
 const mult10 = (a: number): number => a * 10;

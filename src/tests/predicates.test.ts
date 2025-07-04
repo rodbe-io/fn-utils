@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { hasValue, isEmptyObj, isObject } from './predicates';
+import { hasValue, isEmptyObj, isObject } from '../utils/predicates';
 
 describe('hasValue', () => {
   it('should return true if value is not null, undefined, NaN, empty string', () => {

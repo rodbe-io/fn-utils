@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { fuzzySearch, getProp } from './object';
+import { fuzzySearch, getProp } from '../utils/object';
 
 const obj1 = {
   age: 30,

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { tryCatch } from './try-catch';
+import { tryCatch } from '../utils/try-catch';
 
 describe('tryCatch', () => {
   const MAGIC_NUMBER = 42;
