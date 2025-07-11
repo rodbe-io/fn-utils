@@ -1,3 +1,9 @@
+## [1.11.0](https://github.com/rodbe-io/fn-utils/compare/v1.10.0...v1.11.0) (2025-07-11)
+
+### Features
+
+* set permission from shared workflow ([951e64d](https://github.com/rodbe-io/fn-utils/commit/951e64d12dddf18e004f7b3bb9df59ab9e2cc712))
+
 ## [1.10.0](https://github.com/rodbe-io/fn-utils/compare/v1.9.0...v1.10.0) (2025-07-11)
 
 ### Features
