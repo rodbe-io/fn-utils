@@ -1,3 +1,9 @@
+## [1.10.0](https://github.com/rodbe-io/fn-utils/compare/v1.9.0...v1.10.0) (2025-07-11)
+
+### Features
+
+* integrate shared workflow ([e2bb9b3](https://github.com/rodbe-io/fn-utils/commit/e2bb9b3427298698456d1184e8bede67ecb1212d))
+
 ## [1.9.0](https://github.com/rodbe-io/fn-utils/compare/v1.8.0...v1.9.0) (2025-07-04)
 
 ### Features
