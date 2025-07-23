@@ -1,21 +1,52 @@
-// @ts-check
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import js from '@eslint/js';
+import { jsRules, tsRules } from '@rodbe/eslint-config';
+import eslint from '@eslint/js';
+import json from '@eslint/json';
 import tsEslint from 'typescript-eslint';
 import prettier from 'eslint-plugin-prettier/recommended';
-import packageJson from 'eslint-plugin-package-json';
+import packageJsonPlugin from 'eslint-plugin-package-json';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const eslintConfig = tsEslint.config(
+// eslint-disable-next-line no-restricted-exports
+export default tsEslint.config(
   { ignores: ['**/dist/', '**/docs/', '**/coverage/', '**/*.d.ts', 'node_modules'] },
-  js.configs.recommended,
-  tsEslint.configs.strictTypeChecked,
-  tsEslint.configs.stylisticTypeChecked,
-  packageJson.configs.recommended,
   {
+    extends: [json.configs.recommended],
+    files: ['**/*.json'],
+    ignores: ['**/package.json', '**/package-lock.json'],
+    language: 'json/json',
+    rules: {
+      'json/sort-keys': 'error',
+    },
+  },
+  {
+    extends: [json.configs.recommended],
+    files: ['**/*.jsonc'],
+    language: 'json/jsonc',
+    rules: {
+      'json/sort-keys': 'error',
+    },
+  },
+  {
+    extends: [json.configs.recommended],
+    files: ['**/*.json5'],
+    language: 'json/json5',
+    rules: {
+      'json/sort-keys': 'error',
+    },
+  },
+  {
+    extends: [
+      eslint.configs.recommended,
+      tsEslint.configs.strictTypeChecked,
+      tsEslint.configs.stylisticTypeChecked,
+      jsRules,
+      tsRules,
+    ],
+    files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       parserOptions: {
         projectService: {
@@ -25,85 +56,6 @@ const eslintConfig = tsEslint.config(
       },
     },
   },
-  {
-    rules: {
-      '@typescript-eslint/array-type': [
-        'error',
-        {
-          default: 'generic',
-        },
-      ],
-      '@typescript-eslint/consistent-type-exports': 'error',
-      '@typescript-eslint/consistent-type-imports': [
-        'error',
-        {
-          fixStyle: 'inline-type-imports',
-          prefer: 'type-imports',
-        },
-      ],
-      '@typescript-eslint/member-ordering': [
-        'error',
-        {
-          default: {
-            memberTypes: ['method', 'field'],
-            order: 'alphabetically-case-insensitive',
-          },
-        },
-      ],
-      '@typescript-eslint/no-explicit-any': [
-        'error',
-        {
-          fixToUnknown: true,
-        },
-      ],
-      '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-      '@typescript-eslint/no-unnecessary-template-expression': 'error',
-      '@typescript-eslint/no-unnecessary-type-arguments': 'error',
-      '@typescript-eslint/no-unnecessary-type-constraint': 'error',
-      '@typescript-eslint/prefer-as-const': 'error',
-      '@typescript-eslint/prefer-includes': 'error',
-      '@typescript-eslint/prefer-optional-chain': 'error',
-      '@typescript-eslint/prefer-reduce-type-parameter': 'error',
-      '@typescript-eslint/prefer-regexp-exec': 'error',
-      '@typescript-eslint/promise-function-async': 'error',
-      curly: 'error',
-      'max-params': ['error', 2],
-      'newline-after-var': 'error',
-      'newline-before-return': 'error',
-      'no-duplicate-imports': 'error',
-      'no-restricted-exports': [
-        'error',
-        {
-          restrictDefaultExports: {
-            direct: true,
-          },
-        },
-      ],
-      'no-unused-vars': 'off',
-      'sort-imports': [
-        'error',
-        {
-          allowSeparatedGroups: true,
-          ignoreCase: false,
-          ignoreDeclarationSort: true,
-          ignoreMemberSort: false,
-          memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
-        },
-      ],
-      'sort-keys': [
-        'error',
-        'asc',
-        {
-          caseSensitive: false,
-          minKeys: 2,
-          natural: false,
-        },
-      ],
-      'spaced-comment': 'error',
-    },
-  },
+  packageJsonPlugin.configs.recommended,
   prettier
 );
-
-// eslint-disable-next-line no-restricted-exports
-export default eslintConfig;
