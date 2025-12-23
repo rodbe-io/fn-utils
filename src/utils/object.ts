@@ -19,14 +19,18 @@ interface FuzzySearch<T> {
   key: string;
   searchText: string;
 }
-export const fuzzySearch = <T extends object>({ searchText, items, key }: FuzzySearch<T>): Array<T> => {
+export const fuzzySearch = <T extends object>({
+  searchText,
+  items,
+  key,
+}: FuzzySearch<T>): Array<T> => {
   const searches = searchText.split(' ');
   let filtered = structuredClone(items);
 
-  searches.forEach(text => {
+  searches.forEach((text) => {
     const regExp = new RegExp(`(${text.toLowerCase()})`);
 
-    filtered = filtered.filter(item => {
+    filtered = filtered.filter((item) => {
       const matchProp = getProp(key)(item);
 
       if (typeof matchProp !== 'string') {

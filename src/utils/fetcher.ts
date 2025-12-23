@@ -3,7 +3,10 @@ export interface FetchErr {
   statusText: string;
 }
 
-export const fetcher = async <Res>(url: string, opts: RequestInit): Promise<[FetchErr | Error, null] | [null, Res]> => {
+export const fetcher = async <Res>(
+  url: string,
+  opts: RequestInit
+): Promise<[FetchErr | Error, null] | [null, Res]> => {
   try {
     const response = await fetch(url, opts);
 
@@ -28,7 +31,7 @@ export const fetcher = async <Res>(url: string, opts: RequestInit): Promise<[Fet
 };
 
 const delay = async (ms: number) => {
-  return new Promise<void>(resolve => {
+  return new Promise<void>((resolve) => {
     setTimeout(() => {
       resolve();
     }, ms);
@@ -52,7 +55,7 @@ export const retryFetchBuilder =
   async <Res>(url: string, options: RequestInit) => {
     const { retries, retryDelay, statusToRetry } = config;
 
-    return new Promise<[FetchErr | Error, null] | [null, Res]>(resolve => {
+    return new Promise<[FetchErr | Error, null] | [null, Res]>((resolve) => {
       const recursiveFetch = async (retry: number) => {
         const [fetchErr, fecthRes] = await fetcher<Res>(url, options);
 
