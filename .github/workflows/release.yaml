@@ -18,9 +18,11 @@ env:
   HUSKY: 0
 
 jobs:
-  release:
+  call-shared-workflow:
     uses: rodbe-io/shared-workflows/.github/workflows/release.yaml@main
+
     with:
       enable-test-unit: true
+
     secrets:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
