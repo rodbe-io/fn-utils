@@ -1,3 +1,9 @@
+## [1.12.0](https://github.com/rodbe-io/fn-utils/compare/v1.11.0...v1.12.0) (2026-03-22)
+
+### Features
+
+* add documentation + update eslint config ([13e6f1b](https://github.com/rodbe-io/fn-utils/commit/13e6f1b454c9a741006d8d6da7d80790cb0381da))
+
 ## [1.11.0](https://github.com/rodbe-io/fn-utils/compare/v1.10.0...v1.11.0) (2025-07-11)
 
 ### Features
