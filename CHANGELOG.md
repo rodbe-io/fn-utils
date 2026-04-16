@@ -1,3 +1,9 @@
+## [1.13.0](https://github.com/rodbe-io/fn-utils/compare/v1.12.0...v1.13.0) (2026-04-16)
+
+### Features
+
+* **fetch:** return raw response and tojson by opts ([8028352](https://github.com/rodbe-io/fn-utils/commit/80283525c3c4042bf25828e160ad3a9e5b1a6dd9))
+
 ## [1.12.0](https://github.com/rodbe-io/fn-utils/compare/v1.11.0...v1.12.0) (2026-03-22)
 
 ### Features
