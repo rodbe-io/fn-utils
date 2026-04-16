@@ -272,6 +272,10 @@ console.log(parseErr instanceof Error); // → true
 
 A thin fetch wrapper that returns a `[error, data]` tuple instead of throwing. HTTP errors (non-2xx) are returned as `FetchErr`, network errors as `Error`.
 
+Accepts all standard `RequestInit` options plus:
+- `responseToJson?: boolean` — when `true`, automatically parses the response body as JSON and returns it as `Res`.
+- `cbOnError?: (err: Response) => void` — callback invoked on non-2xx responses before returning the error tuple.
+
 ```ts
 import { fetcher } from '@rodbe/fn-utils';
 
@@ -280,23 +284,38 @@ interface User {
   name: string;
 }
 
-const [err, user] = await fetcher<User>('https://api.example.com/users/1', {
+// Basic usage — returns the raw Response
+const [err, response] = await fetcher('https://api.example.com/users/1', {
   method: 'GET',
   headers: { Authorization: 'Bearer token' },
 });
 
 if (err) {
-  if ('status' in err) {
-    // HTTP error
-    console.log(err.status);     // e.g. 404
-    console.log(err.statusText); // e.g. 'Not Found'
-  } else {
-    // Network/parse error
-    console.error(err.message);
-  }
-} else {
-  console.log(user.name);
+  console.log(err.status)
+  return;
 }
+
+const user = await response.json() as User;
+
+// With responseToJson — returns the parsed body typed as User
+const [err, user] = await fetcher<User>('https://api.example.com/users/1', {
+  method: 'GET',
+  responseToJson: true,
+});
+
+if (err) {
+  // HTTP error
+  console.log(err.status);     // e.g. 404
+  console.log(err.statusText); // e.g. 'Not Found'
+} else {
+  console.log(user.name); // user is typed as User
+}
+
+// With cbOnError — side-effect on HTTP errors (e.g. logging, toast)
+const [err, user] = await fetcher<User>('https://api.example.com/users/1', {
+  responseToJson: true,
+  cbOnError: (res) => toast.error(`Request failed: ${res.status}`),
+});
 ```
 
 **Types:**

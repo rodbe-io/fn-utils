@@ -5,13 +5,14 @@ export interface FetchErr {
 
 export const fetcher = async <Res>(
   url: string,
-  opts: RequestInit
-): Promise<[FetchErr | Error, null] | [null, Res]> => {
+  opts: RequestInit & { cbOnError?: (err: Response) => void; responseToJson?: boolean } = {}
+): Promise<[FetchErr | Error, null] | [null, Response | Res]> => {
   try {
     const response = await fetch(url, opts);
 
     if (!response.ok) {
       console.log('Fetcher res-error:', response);
+      opts.cbOnError?.(response);
 
       return [
         {
@@ -22,7 +23,11 @@ export const fetcher = async <Res>(
       ];
     }
 
-    return [null, (await response.json()) as Res];
+    if (opts.responseToJson) {
+      return [null, (await response.json()) as Res];
+    }
+
+    return [null, response];
   } catch (err) {
     console.log('Fetcher error:', err);
 
@@ -55,7 +60,7 @@ export const retryFetchBuilder =
   async <Res>(url: string, options: RequestInit) => {
     const { retries, retryDelay, statusToRetry } = config;
 
-    return new Promise<[FetchErr | Error, null] | [null, Res]>((resolve) => {
+    return new Promise<[FetchErr | Error, null] | [null, Response | Res]>((resolve) => {
       const recursiveFetch = async (retry: number) => {
         const [fetchErr, fecthRes] = await fetcher<Res>(url, options);
 
