@@ -1,3 +1,9 @@
+## [1.13.7](https://github.com/rodbe-io/fn-utils/compare/v1.13.6...v1.13.7) (2026-09-03)
+
+### Bug Fixes
+
+* test add npmrc with dummy env ([226a974](https://github.com/rodbe-io/fn-utils/commit/226a97414d9c534359cbd73f2bc51a8b9884d0e6))
+
 ## [1.13.6](https://github.com/rodbe-io/fn-utils/compare/v1.13.5...v1.13.6) (2026-09-03)
 
 ### Bug Fixes
