@@ -1,3 +1,9 @@
+## [1.13.6](https://github.com/rodbe-io/fn-utils/compare/v1.13.5...v1.13.6) (2026-09-03)
+
+### Bug Fixes
+
+* test add npmrc ([b652408](https://github.com/rodbe-io/fn-utils/commit/b652408b08be10348bb670138eb65c37eb2bbe04))
+
 ## [1.13.5](https://github.com/rodbe-io/fn-utils/compare/v1.13.4...v1.13.5) (2026-09-03)
 
 ### Bug Fixes
