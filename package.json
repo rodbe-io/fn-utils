@@ -4,7 +4,8 @@
   "description": "RBX npm Library",
   "keywords": [
     "typescript",
-    "front-end"
+    "front-end",
+    "utilities functions"
   ],
   "homepage": "https://github.com/rodbe-io/fn-utils",
   "bugs": {
