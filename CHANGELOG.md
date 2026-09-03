@@ -1,3 +1,9 @@
+## [1.13.8](https://github.com/rodbe-io/fn-utils/compare/v1.13.7...v1.13.8) (2026-09-03)
+
+### Bug Fixes
+
+* remove unused npmrc ([a32d2d2](https://github.com/rodbe-io/fn-utils/commit/a32d2d201be8548369d5535fe536961ff49e55e8))
+
 ## [1.13.7](https://github.com/rodbe-io/fn-utils/compare/v1.13.6...v1.13.7) (2026-09-03)
 
 ### Bug Fixes
