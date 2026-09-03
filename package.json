@@ -5,7 +5,8 @@
   "keywords": [
     "typescript",
     "front-end",
-    "utilities functions"
+    "utilities functions",
+    "functional programming"
   ],
   "homepage": "https://github.com/rodbe-io/fn-utils",
   "bugs": {
