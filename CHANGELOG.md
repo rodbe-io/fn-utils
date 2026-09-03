@@ -1,3 +1,9 @@
+## [1.13.5](https://github.com/rodbe-io/fn-utils/compare/v1.13.4...v1.13.5) (2026-09-03)
+
+### Bug Fixes
+
+* test add registry in pkg.json ([b77d937](https://github.com/rodbe-io/fn-utils/commit/b77d937354a20360ee33205317ef0661fce3201a))
+
 ## [1.13.4](https://github.com/rodbe-io/fn-utils/compare/v1.13.3...v1.13.4) (2026-09-03)
 
 ### Bug Fixes
