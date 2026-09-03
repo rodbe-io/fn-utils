@@ -1,3 +1,9 @@
+## [1.13.4](https://github.com/rodbe-io/fn-utils/compare/v1.13.3...v1.13.4) (2026-09-03)
+
+### Bug Fixes
+
+* trigger pipeline ([989a0d3](https://github.com/rodbe-io/fn-utils/commit/989a0d3baaac668cdd17545366f1a3b42c429818))
+
 ## [1.13.3](https://github.com/rodbe-io/fn-utils/compare/v1.13.2...v1.13.3) (2026-09-03)
 
 ### Bug Fixes
